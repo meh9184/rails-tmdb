@@ -69,7 +69,7 @@ def generateCrawlList()
             crawl_list.push(tvs_option['results'][i]['id'])
         end
 
-    # Ruby 스크립트 실행시 -top 옵션을 넣지 않았다면 입력한 파라미터들을 리스트로 복사
+    # Ruby 스크립트 실행시 -rating 또는 -popular 옵션을 넣지 않았다면 입력한 파라미터들을 리스트로 복사
     else
         crawl_list = ARGV
     end

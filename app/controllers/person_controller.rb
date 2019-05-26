@@ -26,7 +26,7 @@ class PersonController < ApplicationController
   
   # READ
   def index
-    @people = Person.order('updated_at DESC').all
+    @people = Person.order('updated_at ASC').all
     @number_of_people = @people.count
   end
   def show
