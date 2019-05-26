@@ -25,12 +25,12 @@ def generateCrawlList()
     # 최종 Crawl List 받을 배열
     crawl_list = []
 
-    # 스크립트 실행시 -rated 옵션 또는 -popular 옵션과
-    # 상위 몇위 까지 크롤할지의 크기를 입력하면 평점 순위대로 TV를 수집
-    if (ARGV[0] == '-rated' || ARGV[0] == '-popular') && ARGV.length == 2
+    # 스크립트 실행시 -rating 옵션 또는 -popular 옵션과
+    # 상위 몇위 까지 크롤할지의 크기를 입력하면 각 순위대로 TV를 수집
+    if (ARGV[0] == '-rating' || ARGV[0] == '-popular') && ARGV.length == 2
 
         # option에 맞게 uri 파라미터 이름을 저장
-        if ARGV[0] == '-rated'
+        if ARGV[0] == '-rating'
             option = 'top_rated'
         elsif ARGV[0] == '-popular'
             option = 'popular'
