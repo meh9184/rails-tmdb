@@ -173,30 +173,41 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > - **Crwaler Usage**
 > 
 >     1. 단일 수집
->         - movie_id = 372058 인 영화
->         - tv_id = 63926 인 TV 방송
+>         - movie_id = 372058인 Movie
+>         - tv_id = 63926인 TV
+>         - person_id = 1245인 Person
 >             ```bash
->             $rails runner lib/crawl_movie 372058
->             $rails runner lib/crawl_tv 63926
+>             $rails runner lib/crawl_movie.rb 372058
+>             $rails runner lib/crawl_tv.rb 63926
+>             $rails runner lib/crawl_people.rb 1245
 >             ```
 >     2. 다수 수집
->         - movie_id = 372058, 637, 129 인 영화
->         - tv_id = 63926, 66732, 1396 인 TV 방송
+>         - movie_id = 372058, 637, 129인 Movie
+>         - tv_id = 63926, 66732, 1396인 TV
+>         - person_id = 1245, 9827, 6384인 Person
 >             ```bash
->             $rails runner lib/crawl_movie 372058 637 129
->             $rails runner lib/crawl_tv 63926 66732 1396
+>             $rails runner lib/crawl_movie.rb 372058 637 129
+>             $rails runner lib/crawl_tv.rb 63926 66732 1396
+>             $rails runner lib/crawl_tv.rb 1245 9827 6384
 >             ```
->     3. 평점 순위 높은 순서대로 수집
+>     3. 평점 순위 높은 순서대로 수집 (person은 평점 존재하지 않음)
 >         - 평점 순위 상위 5개 영화
 >         - 평점 순위 상위 50개 TV 방송
 >             ```bash
->             $rails runner lib/crawl_movie -rating 5
->             $rails runner lib/crawl_tv -rating 50
+>             $rails runner lib/crawl_movie.rb -rating 5
+>             $rails runner lib/crawl_tv.rb -rating 50
 >             ```
 >     4. 인기 있는 순서대로 수집
->         - 요즘 가장 있는 상위 32개 영화
->         - 요즘 가장 있는 상위 7개 TV 방송
+>         - 요즘 가장 인기 있는 상위 32개 Moive
+>         - 요즘 가장 인기 있는 상위 7개 TV
+>         - 요즘 가장 인기 있는 상위 15개 People
 >             ```bash
->             $rails runner lib/crawl_movie -popularity 5
->             $rails runner lib/crawl_tv -popularity 50
+>             $rails runner lib/crawl_movie.rb -popularity 5
+>             $rails runner lib/crawl_tv.rb -popularity 50
+>             ```
+>     5. -rating -popular 옵션 들어간 스크립트 한번에 실행
+>         - 옵션으로 모든 경우 수집하고 싶은 데이터의 개수 입력
+>         - Movie, Tv, People 모두 상위 10개의 -rating -popular 수집하고 싶은 경우
+>             ```bash
+>             $rails runner lib/crawl_all.rb 10
 >             ```
