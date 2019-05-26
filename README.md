@@ -265,7 +265,7 @@
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
 >
 >  
-> #### New
+> ### New
 > - `app/views/*/new.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
