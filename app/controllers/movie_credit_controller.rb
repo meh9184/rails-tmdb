@@ -13,7 +13,7 @@ class MovieCreditController < ApplicationController
     @movieCredit.save
 
     render status: 200, json: {
-      message: "THE MOVIE_CREDIT##{params[:movie_id]}-#{params[:person_id]} CREATE COMPLETE."
+      message: "[COMPLETE] The MOVIE_CREDIT##{params[:movie_id]}-#{params[:person_id]} is created."
     }.to_json
   end
 end

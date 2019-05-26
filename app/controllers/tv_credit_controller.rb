@@ -13,7 +13,7 @@ class TvCreditController < ApplicationController
     @tvCredit.save
 
     render status: 200, json: {
-      message: "THE TV_CREDIT##{params[:tv_id]}-#{params[:person_id]} CREATE COMPLETE."
+      message: "[COMPLETE] The TV_CREDIT##{params[:tv_id]}-#{params[:person_id]} is created."
     }.to_json
   end
 end

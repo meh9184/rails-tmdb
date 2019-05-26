@@ -3,7 +3,8 @@ require 'net/http'
 require 'json'
 
 # TMDB API KEY 셋팅
-$tmdb_api_key = ENV['TMDB_API_KEY']
+# $tmdb_api_key = ENV['TMDB_API_KEY']
+$tmdb_api_key = 'fd72c80d8a52bc768c5d13d97d180483'
 
 # TMDB API에 GET 요청 전송하는 함수
 def getDataFromApi(uri)
@@ -12,6 +13,7 @@ end
 
 # LOCAL SERVER로 POST 요청 전송하는 함수
 def postDataToServer(uri, body)
+    body['api-call'] = 'true'
     request = Net::HTTP::Post.new(uri.request_uri, {'Content-Type' =>'application/json'})
     request.body = body.to_json
     return Net::HTTP.new(uri.host, uri.port).request(request)
@@ -92,7 +94,7 @@ tv_id_list.each do|tv_id|
 
     # status_code가 34면 리소스 존재하지 않음으로 건너 뜀
     if tv['status_code'] == 34
-        puts "THE TV##{tv_id} COULD NOT BE FOUND."
+        puts "[ERROR   ] The TV##{tv_id} could not be found."
     
     # 리소스 존재한다면 CRAWL 작업 진행
     else
@@ -110,7 +112,7 @@ tv_id_list.each do|tv_id|
         if response.code == '200'
             puts JSON.parse(response.body)["message"]
         else
-            puts "THE TV##{tv_id} AREADY CREATED VALUE."
+            puts "[ERROR   ] The TV##{tv_id} is aleady created value."
         end
 
 
@@ -149,7 +151,7 @@ tv_id_list.each do|tv_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE PERSON##{person['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The PERSON##{person['person_id']} is aleady created value."
             end
 
             # Tv와 Person 사이의 관계를 의미하는 TvCredit 생성
@@ -164,7 +166,7 @@ tv_id_list.each do|tv_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE TV_CREDIT##{tv_credit['tv_id']}-#{tv_credit['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The TV_CREDIT##{tv_credit['tv_id']}-#{tv_credit['person_id']} aleady created value."
             end
         end
 
@@ -197,7 +199,7 @@ tv_id_list.each do|tv_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE PERSON##{person['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The PERSON##{person['person_id']} is aleady created value."
             end
 
             # Tv와 Person 사이의 관계를 의미하는 TvCredit 생성
@@ -212,7 +214,7 @@ tv_id_list.each do|tv_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE TV_CREDIT##{tv_credit['tv_id']}-#{tv_credit['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The MOVIE_CREDIT##{tv_credit['tv_id']}-#{tv_credit['person_id']} aleady created value."
             end
         end
     end

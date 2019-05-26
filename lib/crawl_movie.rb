@@ -13,7 +13,7 @@ end
 
 # LOCAL SERVER로 POST 요청 전송하는 함수
 def postDataToServer(uri, body)
-    body['api-call'] = true
+    body['api-call'] = 'true'
     request = Net::HTTP::Post.new(uri.request_uri, {'Content-Type' =>'application/json'})
     request.body = body.to_json
     return Net::HTTP.new(uri.host, uri.port).request(request)
@@ -94,7 +94,7 @@ movie_id_list.each do|movie_id|
 
     # status_code가 34면 리소스 존재하지 않음으로 건너 뜀
     if movie['status_code'] == 34
-        puts "THE MOVIE##{movie_id} COULD NOT BE FOUND."
+        puts "[ERROR   ] The MOVIE##{movie_id} could not be found."
     
     # 리소스 존재한다면 CRAWL 작업 진행
     else
@@ -112,7 +112,8 @@ movie_id_list.each do|movie_id|
         if response.code == '200'
             puts JSON.parse(response.body)["message"]
         else
-            puts "THE MOVIE##{movie_id} AREADY CREATED VALUE."
+            puts response.body
+            puts "[ERROR   ] The MOVIE##{movie_id} is aleady created value."
         end
 
 
@@ -151,7 +152,7 @@ movie_id_list.each do|movie_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE PERSON##{person['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The PERSON##{person['person_id']} is aleady created value."
             end
 
             # Movie와 Person 사이의 관계를 의미하는 MovieCredit 생성
@@ -166,7 +167,7 @@ movie_id_list.each do|movie_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE MOVIE_CREDIT##{movie_credit['movie_id']}-#{movie_credit['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The MOVIE_CREDIT##{movie_credit['movie_id']}-#{movie_credit['person_id']} aleady created value."
             end
         end
 
@@ -180,7 +181,7 @@ movie_id_list.each do|movie_id|
 
         crews.each do |crew|
 
-            # crew 의 id 값을 이용하여 Person data get 요청 (누락되는 정보들 존재해서 person uri로 다시 요청)
+             # crew 의 id 값을 이용하여 Person data get 요청 (누락되는 정보들 존재해서 person uri로 다시 요청)
             tmdb_api_uri_person = URI("https://api.themoviedb.org/3/person/#{crew['id']}?api_key=#{$tmdb_api_key}")
             person = getDataFromApi(tmdb_api_uri_person)
 
@@ -199,7 +200,7 @@ movie_id_list.each do|movie_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE PERSON##{person['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The PERSON##{person['person_id']} is aleady created value."
             end
 
             # Movie와 Person 사이의 관계를 의미하는 MovieCredit 생성
@@ -214,7 +215,7 @@ movie_id_list.each do|movie_id|
             if response.code == '200'
                 puts JSON.parse(response.body)["message"]
             else
-                puts "THE MOVIE_CREDIT##{movie_credit['movie_id']}-#{movie_credit['person_id']} AREADY CREATED VALUE."
+                puts "[ERROR   ] The MOVIE_CREDIT##{movie_credit['movie_id']}-#{movie_credit['person_id']} aleady created value."
             end
         end
     end

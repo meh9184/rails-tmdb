@@ -14,13 +14,13 @@ class MovieController < ApplicationController
     @movie.poster_path = params[:poster_path]
     @movie.save
     
-    if params[:api_call] == true
-      render status: 200, json: {
-        message: "THE MOVIE##{params[:movie_id]} CREATE COMPLETE."
-      }.to_json
+    if params[:api_call] == 'false'
+      redirect_to '/movies'
     else
-      redirect_to '/movie'
-    end    
+      render status: 200, json: {
+        message: "[COMPLETE] The MOVIE##{params[:movie_id]} is created."
+      }.to_json
+    end
   end
 
   # READ

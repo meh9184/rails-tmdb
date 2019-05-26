@@ -13,6 +13,8 @@
   <div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
 
     <form action="/movies" method="post">
+      <input type="hidden" name="api-call" value="false" />
+      
       <h2><input type="text" name="title" placeholder="Insert Title" /></h2>
       <p> ID : <input type="text" name="id" value="Auto Insert" disabled/></p>
       <p> Rating : <input type="text" name="rating" placeholder="Insert Rating" /></p>

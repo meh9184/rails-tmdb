@@ -15,13 +15,13 @@ class PersonController < ApplicationController
     @person.profile_path = params[:profile_path]
     @person.save
     
-    if params[:api_call] == true
-      render status: 200, json: {
-        message: "THE PERSON##{params[:person_id]} CREATE COMPLETE."
-      }.to_json
-    else
+    if params[:api_call] == 'false'
       redirect_to '/people'
-    end    
+    else
+      render status: 200, json: {
+        message: "[COMPLETE] The PERSON##{params[:person_id]} is created."
+      }.to_json
+    end
   end
   
   # READ
