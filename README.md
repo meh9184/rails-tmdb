@@ -235,7 +235,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ### Views
 > 
-> ####Index
+> ### Index
 > - `app/views/*/index.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -245,7 +245,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > 
 > 
-> ####Show
+> ### Show
 > - `app/views/*/show.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -255,7 +255,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
 >
 >  
-> #### Edit
+> ### Edit
 > - `app/views/*/edit.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
