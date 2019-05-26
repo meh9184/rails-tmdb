@@ -25,10 +25,19 @@ def generateCrawlList()
     # 최종 Crawl List 받을 배열
     crawl_list = []
 
-    # 스크립트 실행시 -top 옵션과 상위 몇위 까지 크롤할지의 크기를 입력하면 평점 순위대로 TV를 수집
-    if ARGV[0] == '-top' && ARGV.length == 2
+    # 스크립트 실행시 -rated 옵션 또는 -popular 옵션과
+    # 상위 몇위 까지 크롤할지의 크기를 입력하면 평점 순위대로 TV를 수집
+    if (ARGV[0] == '-rated' || ARGV[0] == '-popular') && ARGV.length == 2
 
-        # TMDB API의 GET tv/top_rated 리소스의 경우 각 페이지별로 20개씩 제공하기 때문에 page와 offset을 적절히 계산해야 함
+        # option에 맞게 uri 파라미터 이름을 저장
+        if ARGV[0] == '-rated'
+            option = 'top_rated'
+        elsif ARGV[0] == '-popular'
+            option = 'popular'
+        end
+
+        # TMDB API의 GET tv/top_rated 과 tv/popular 리소스의 경우 
+        # 각 페이지별로 20개씩 제공하기 때문에 page와 offset을 적절히 계산해야 함
 
         # 수집할 TV의 숫자 (스크립트 실행시 넘겨받은 파라미터)
         number_of_tv = ARGV[1].to_i()
@@ -40,24 +49,24 @@ def generateCrawlList()
         # 일단 미리 계산해놀은 페이지의 숫자만큼 각 20개씩 TV ID 수집 
         for i in 1..number_of_page
             
-            # TMDB API GET GET tv/top_rated 리소스 URI를 만들어 20개의 TV 데이터 요청 
-            tmdb_api_uri_tv_top = URI("https://api.themoviedb.org/3/tv/top_rated?api_key=#{$tmdb_api_key}&language=en-US&page=#{i}")
-            tvs_top_rated = getDataFromApi(tmdb_api_uri_tv_top)
+            # TMDB API GET GET tv/option 리소스 URI를 만들어 20개의 TV 데이터 요청 
+            tmdb_api_uri_option = URI("https://api.themoviedb.org/3/tv/#{option}?api_key=#{$tmdb_api_key}&language=en-US&page=#{i}")
+            tvs_option = getDataFromApi(tmdb_api_uri_option)
 
             # 각 페이지의 모든 TV ID 순서대로 crawl_list에 저장
             for j in 0..19
-                crawl_list.push(tvs_top_rated['results'][j]['id'])
+                crawl_list.push(tvs_option['results'][j]['id'])
             end
         end
 
         # 미리 계산해놓은 page 만큼 수집을 완료하면 마지막 페이지에서는 미리 계산한 offset 만큼 TV ID를 수집
-        # TMDB API GET GET tv/top_rated 리소스 URI를 만들어 TV 데이터 요청
-        tmdb_api_uri_tv_top = URI("https://api.themoviedb.org/3/tv/top_rated?api_key=#{$tmdb_api_key}&language=en-US&page=#{number_of_page+1}")
-        tvs_top_rated = getDataFromApi(tmdb_api_uri_tv_top)
+        # TMDB API GET GET tv/option 리소스 URI를 만들어 TV 데이터 요청
+        tmdb_api_uri_option = URI("https://api.themoviedb.org/3/tv/#{option}?api_key=#{$tmdb_api_key}&language=en-US&page=#{number_of_page+1}")
+        tvs_option = getDataFromApi(tmdb_api_uri_option)
 
         # 20개의 데이터 중 상위 offset 개의 TV ID를 crawl_list에 저장
         for i in 0..(number_of_offset-1)
-            crawl_list.push(tvs_top_rated['results'][i]['id'])
+            crawl_list.push(tvs_option['results'][i]['id'])
         end
 
     # Ruby 스크립트 실행시 -top 옵션을 넣지 않았다면 입력한 파라미터들을 리스트로 복사
