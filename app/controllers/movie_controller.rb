@@ -14,11 +14,13 @@ class MovieController < ApplicationController
     @movie.poster_path = params[:poster_path]
     @movie.save
     
-    # redirect_to '/movie'
-    
-    render status: 200, json: {
-      message: "THE MOVIE##{params[:movie_id]} CREATE COMPLETE."
-    }.to_json
+    if params[:api_call] == true
+      render status: 200, json: {
+        message: "THE MOVIE##{params[:movie_id]} CREATE COMPLETE."
+      }.to_json
+    else
+      redirect_to '/movie'
+    end    
   end
 
   # READ
@@ -64,6 +66,6 @@ class MovieController < ApplicationController
       elsif string.length > n
         string = string[0..n].concat(" ... ")
       end
-        return string
+      return string
     end
 end

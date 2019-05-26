@@ -3,7 +3,8 @@ require 'net/http'
 require 'json'
 
 # TMDB API KEY 셋팅
-$tmdb_api_key = ENV['TMDB_API_KEY']
+# $tmdb_api_key = ENV['TMDB_API_KEY']
+$tmdb_api_key = 'fd72c80d8a52bc768c5d13d97d180483'
 
 # TMDB API에 GET 요청 전송하는 함수
 def getDataFromApi(uri)
@@ -12,6 +13,7 @@ end
 
 # LOCAL SERVER로 POST 요청 전송하는 함수
 def postDataToServer(uri, body)
+    body['api-call'] = true
     request = Net::HTTP::Post.new(uri.request_uri, {'Content-Type' =>'application/json'})
     request.body = body.to_json
     return Net::HTTP.new(uri.host, uri.port).request(request)

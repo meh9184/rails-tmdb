@@ -14,11 +14,13 @@ class TvController < ApplicationController
     @tv.poster_path = params[:poster_path]
     @tv.save
 
-    # redirect_to '/tvs'
-
-    render status: 200, json: {
-      message: "THE TV##{params[:tv_id]} CREATE COMPLETE."
-    }.to_json
+    if params[:api_call] == true
+      render status: 200, json: {
+        message: "THE TV##{params[:tv_id]} CREATE COMPLETE."
+      }.to_json
+    else
+      redirect_to '/tvs'
+    end
   end
 
   # READ
@@ -64,6 +66,6 @@ class TvController < ApplicationController
       elsif string.length > n
         string = string[0..n].concat(" ... ")
       end
-        return string
+      return string
     end
 end
