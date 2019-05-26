@@ -240,7 +240,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > | --- | --- | --- | --- |
 > |**GET** |/resources|resource#index|모든 Resource 표시|
 >
-> <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index"/>
+> <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > 
 > - `app/views/*/show.html.erb`
 > 
@@ -248,7 +248,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > | --- | --- | --- | --- |
 > |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
 >
-> <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show"/>
+> <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
 > 
 > - `app/views/*/edit.html.erb`
 > 
@@ -256,7 +256,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > | --- | --- | --- | --- |
 > |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
 >
-> <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit"/>
+> <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
 > 
 > - `app/views/*/new.html.erb`
 > 
@@ -264,5 +264,5 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > | --- | --- | --- | --- |
 > |**GET** |/resources/:resource_id/new|resource#new|Resource 작성용 양식을 반환|
 >
-> <img src="./app/assets/images/screenshot-new.jpg" alt="screenshot-new"/>
+> <img src="./app/assets/images/screenshot-new.jpg" alt="screenshot-new" width='62%' height='62%'/>
 > 
