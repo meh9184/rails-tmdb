@@ -118,7 +118,7 @@
 
 ### Configure  db connection
 > 
-> - `config/database.yml`
+> - `config/database.yml` 파일 상단의
 > - username, password 입력
 > 
 > ```yml
@@ -140,7 +140,7 @@
 >   database: tmdb_test
 > ```
 > 
-> - `lib/crawl_movie.rb`, `lib/crawl_tv.rb`
+> - `lib/crawl_movie.rb`, `lib/crawl_tv.rb`, `lib/crawl_people.rb` 파일 상단의
 > -  $tmdb_api_key 입력
 > 
 > ```ruby
