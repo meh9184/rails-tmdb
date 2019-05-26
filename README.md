@@ -1,5 +1,5 @@
 # rails-tmdb
-
+<이미지>
 TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
 
 
@@ -30,11 +30,11 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 
 ## End-points
-[루비온레일즈 개발 가이드 공식 다큐먼트](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
+[RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 
-- Resource Modeling
+**Resource Modeling**
 
-모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
+- 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
 
 |  HTTP |  Path |  Controller#action |  목적 |
 |:--------|:----------------:|:--------:|--------:|
@@ -46,9 +46,9 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 |**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
 |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
 
-- Route
+**Route**
 
-`config/routes.rb`
+- `config/routes.rb`
 ```ruby
 Rails.application.routes.draw do
 
