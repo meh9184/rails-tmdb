@@ -142,7 +142,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > end
 > ```
 
-### Bundle install 
+### Install bundle 
 
 > - `shell command` 프로젝트 루트 위치에서 입력
 > ```bash
@@ -150,12 +150,26 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > ```
 
 ### Setup database
-
-> - `shell command` 프로젝트 루트 위치에서 입력
+> - 같은 위치에서 입력
 > ```bash
 > $ rake db:create
 > $ rake db:migrate
 > ```
 
+
+## *Usage*
+
+### Run server
+
+> - configuration과 bundle install, db setup이 끝났으면 로컬 서버를 실행
+> - `shell command` 프로젝트 루트 위치에서 입력
+> ```bash
+> $ rails server
+> ```
+
+### Data generation
+
+> - 서버 setting 및 run 까지 완료했지만, 현재 DB 는 비어있음
+> - 데이터를 Crawl하는 Ruby script를 실행하여 TMDB로 부터 데이터를 생성해야 함 
 
 
