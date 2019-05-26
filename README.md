@@ -209,8 +209,8 @@
 >             $rails runner lib/crawl_person.rb 1245 9827 6384
 >             ```
 >     3. 평점 순위 높은 순서대로 수집 (person은 평점 존재하지 않음)
->         - 평점 순위 상위 5개 영화
->         - 평점 순위 상위 50개 TV 방송
+>         - 평점 순위 상위 5개 Movie
+>         - 평점 순위 상위 50개 TV
 >             ```bash
 >             $rails runner lib/crawl_movie.rb -rating 5
 >             $rails runner lib/crawl_tv.rb -rating 50
@@ -220,8 +220,9 @@
 >         - 요즘 가장 인기 있는 상위 7개 TV
 >         - 요즘 가장 인기 있는 상위 15개 People
 >             ```bash
->             $rails runner lib/crawl_movie.rb -popularity 5
->             $rails runner lib/crawl_tv.rb -popularity 50
+>             $rails runner lib/crawl_movie.rb -popularity 32
+>             $rails runner lib/crawl_tv.rb -popularity 7
+>             $rails runner lib/crawl_person.rb -popularity 15
 >             ```
 >     5. -rating -popular 옵션 들어간 스크립트 한번에 실행
 >         - 옵션으로 모든 경우 수집하고 싶은 데이터의 개수 입력
@@ -279,4 +280,16 @@
 > 
 > - 현재의 Crawler 는 사실상 평점/인기 높은 데이터를 순차적으로 가져오는 Scraper 정도 되는것 같음. API를 통해 리소스들에 타고 들어가면서 데이터를 수집하는 정통적인 Crawler 개발 필요
 > - TV의 에피소드, 시리즈 정보는 데이터 모델링 하지 못함. Ruby on Rails 의 모델링 문법과 방법에 대해 더 공부할 필요 있음.
+> 
+
+
+## *References*
+> 
+> - https://medium.com/@shaircast/ruby-on-rails-on-wsl-%EC%9C%88%EB%8F%84%EC%9A%B0-10%EC%97%90%EC%84%9C-%EB%A0%88%EC%9D%BC%EC%A6%88-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-9a6164df51f
+> - https://docs.microsoft.com/ko-kr/windows/wsl/install-win10
+> - https://gorails.com/setup/windows/10
+> - https://medium.com/@colinrubbert/installing-ruby-on-rails-in-windows-10-w-bash-postgresql-e48e55954fbf
+> - https://github.com/luciuschoi/wsl_setting_for_rails
+> - https://medium.com/@joystar/%EC%9C%88%EB%8F%84%EC%9A%B0-wsl-18-04%EC%97%90%EC%84%9C-%EB%A0%88%EC%9D%BC%EC%A6%88-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-252b04dae45b
+> - https://rubykr.github.io/rails_guides/getting_started.html
 > 
