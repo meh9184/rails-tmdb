@@ -26,7 +26,7 @@ class PersonController < ApplicationController
   
   # READ
   def index
-    @people = Person.order('RAND()').all
+    @people = Person.order('updated_at DESC').all
     @number_of_people = @people.count
   end
   def show

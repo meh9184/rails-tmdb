@@ -25,7 +25,7 @@ class MovieController < ApplicationController
 
   # READ
   def index
-    @movies = Movie.order('RAND()').all
+    @movies = Movie.order('updated_at DESC').all
     @number_of_movies = @movies.count
   end
   def show

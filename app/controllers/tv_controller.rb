@@ -25,7 +25,7 @@ class TvController < ApplicationController
 
   # READ
   def index
-    @tvs = Tv.order('RAND()').all
+    @tvs = Tv.order('updated_at DESC').all
     @number_of_tvs = @tvs.count
   end
   def show
