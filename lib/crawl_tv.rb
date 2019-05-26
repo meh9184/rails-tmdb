@@ -3,8 +3,7 @@ require 'net/http'
 require 'json'
 
 # TMDB API KEY 셋팅
-# $tmdb_api_key = ENV['TMDB_API_KEY']
-$tmdb_api_key = 'fd72c80d8a52bc768c5d13d97d180483'
+$tmdb_api_key = YOUR_TMDB_API_KEY   # 자신의 TMDB api_key 입력
 
 # TMDB API에 GET 요청 전송하는 함수
 def getDataFromApi(uri)
