@@ -101,16 +101,17 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ## *Installation*
 
-### Configuration
+### Configurate 
 
-- `db/database.yml` 파일 database connection 정보 입력 
+- `config/database.yml`
+- username, password 입력
 ```yml
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password: ansdmsghks9184
+  username: <mark>YOUR_USERNAME</mark>
+  password: <mark>YOUR_PASSWORD</mark>
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
