@@ -1,8 +1,18 @@
 # rails-tmdb
 
-<미리보기 이미지>
-
 TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
+
+<div>
+  <div width='100%'>
+    <img src="./app/assets/images/screenshot-main-1.jpg" width='48%'/>
+    <img src="./app/assets/images/screenshot-main-2.jpg" width='48%'/>
+  </div>
+  <div width='100%'>
+    <img src="./app/assets/images/screenshot-main-3.jpg" width='48%'/>
+    <img src="./app/assets/images/screenshot-main-4.jpg" width='48%'/>
+  </div>
+</div>
+<br>
 
 <br/>
 
@@ -81,16 +91,24 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 >   put 'people/:person_id' => 'person#update'
 >   delete 'people/:person_id' => 'person#destroy'
 > 
+>   # MovieCredits CR endpoints
+>   get 'movie_credits' => 'movie_credit#index'
+>   post '/movie_credits' => 'movie_credit#create'
+> 
+>   # TvCredits CR endpoints
+>   get 'tv_credits' => 'tv_credit#index'
+>   post '/tv_credits' => 'tv_credit#create'
+> 
 > end
 > 
 > ```
 
-### Database Schema
+### Models
 > 
 > <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
-### Service Flow
+### Service f;ow
 > 
 > <img src="./app/assets/images/system-configuration.jpg" alt="system-configuration"/>
 
@@ -208,6 +226,11 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 >     5. -rating -popular 옵션 들어간 스크립트 한번에 실행
 >         - 옵션으로 모든 경우 수집하고 싶은 데이터의 개수 입력
 >         - Movie, Tv, People 모두 상위 10개의 -rating -popular 수집하고 싶은 경우
+>         - 10개씩 모두 수집하는 경우 약 5분 내외 소요
 >             ```bash
 >             $rails runner lib/crawl_all.rb 10
 >             ```
+
+## *Results*
+
+### Views

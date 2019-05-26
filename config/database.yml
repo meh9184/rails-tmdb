@@ -9,10 +9,10 @@ default: &default
 
 development:
   <<: *default
-  database: tmdb_development_smulation
+  database: tmdb_development
 
 test:
   <<: *default
-  database: tmdb_test_smulation
+  database: tmdb_test
 
   
