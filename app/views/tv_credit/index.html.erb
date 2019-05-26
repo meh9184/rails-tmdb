@@ -1,0 +1,28 @@
+<h1>전체 TvCredit 조회</h1>
+
+<hr />
+<span style="margin-left:20px"> Tv_id </span>
+<span style="margin-left:20px"> Person_id </span>
+<span style="margin-left:20px"> Role </span>
+<hr />
+<% @movieCredits.each do |mc|%>
+
+  <span style="float:left; margin-left:20px ">
+    <a href="/tvs/<%= mc.tv_id %>">
+      <%= mc.tv_id %><br />
+    </a>
+  </span>
+
+  <span style="float:left; margin-left:20px">
+    <a href="/people/<%= mc.person_id %>">
+      <%= mc.person_id %><br />
+    </a>
+  </span>
+
+  <span style="float:left; margin-left:20px ">
+      <%= mc.role %><br />
+  </span>
+
+  <br />
+  <hr />
+<% end %>

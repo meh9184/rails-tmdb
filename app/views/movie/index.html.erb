@@ -1,0 +1,21 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2>MOVIES</h2>
+    <h2 class="sub-text">total : <%= @number_of_movies %></h2>
+  </div>
+</div>
+
+<%= link_to "Insert New Movie", "/movies/new", class: "btn btn-sm btn-danger mb-2", style:'margin:20px' %>
+<br />
+
+<% @movies.each do |m|%>
+  <% if m.poster_path %>
+    <a href="/movies/<%= m.movie_id %>">
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + m.poster_path, alt: m.title, class: 'poster-img', style:'margin:20px')%>
+    </a>
+  <% else %>
+    <a href="/movies/<%= m.movie_id %>">
+      <%= image_tag('', alt: m.title, class: 'no-img-preview-sm', style:'margin:20px')%>
+    </a>
+  <% end %>
+<% end %>

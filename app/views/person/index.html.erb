@@ -1,0 +1,21 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2>PEOPLE</h2>
+    <h2 class="sub-text">total : <%= @number_of_people %></h2>
+  </div>
+</div>
+
+<%= link_to "Insert New Person", "/people/new", class: "btn btn-sm btn-danger mb-2", style:'margin:20px' %>
+<br />
+
+<% @people.each do |p|%>
+  <% if p.profile_path %>
+    <a href="/people/<%= p.person_id %>">
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + p.profile_path, alt: p.name, class: 'poster-img', style:'margin:20px')%>
+    </a>
+  <% else %>
+    <a href="/people/<%= p.person_id %>">
+      <%= image_tag('', alt: p.name, class: 'no-img-preview-sm', style:'margin:20px')%>
+    </a>
+  <% end %>
+<% end %>

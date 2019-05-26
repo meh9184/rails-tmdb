@@ -1,0 +1,35 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2>NEW MOVIE</h2>
+  </div>
+</div>
+
+<div class="row mt-4 poster-show-container">
+  <div class="col-lg-6 col-md-12 poster-show-img">
+    
+    <%= image_tag("", alt: "No Poster", class: "animated slideInLeft no-img-preview-md") %>
+
+  </div>
+  <div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
+
+    <form action="/movies" method="post">
+      <h2><input type="text" name="title" placeholder="Insert Title" /></h2>
+      <p> ID : <input type="text" name="id" value="Auto Insert" disabled/></p>
+      <p> Rating : <input type="text" name="rating" placeholder="Insert Rating" /></p>
+      <h4>Overview</h4>
+      <p> <textarea placeholder="Insert Overview" name="overview" rows="9" style="width:85%" ></textarea> </p>
+
+      <input type="submit" value="Submit" style="float:left; margin-bottom:5px">
+
+      <br/>
+      <br/>
+    </form>
+    <p>
+      <%= link_to "< Previous",
+        "/movies", class: "btn btn-sm btn-danger mb-2"
+      %>
+    </p>
+    </form>
+
+  </div>
+</div>

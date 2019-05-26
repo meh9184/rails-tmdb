@@ -1,0 +1,21 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2>TVS</h2>
+    <h2 class="sub-text">total : <%= @number_of_tvs %></h2>
+  </div>
+</div>
+
+<%= link_to "Insert New Tv", "/tvs/new", class: "btn btn-sm btn-danger mb-2", style:'margin:20px' %>
+<br />
+
+<% @tvs.each do |t|%>
+  <% if t.poster_path %>
+    <a href="/tvs/<%= t.tv_id %>">
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + t.poster_path, alt: t.name, class: 'poster-img', style:'margin:20px')%>
+    </a>
+  <% else %>
+    <a href="/tvs/<%= t.tv_id %>">
+      <%= image_tag('', alt: t.name, class: 'no-img-preview-sm', style:'margin:20px')%>
+    </a>
+  <% end %>
+<% end %>

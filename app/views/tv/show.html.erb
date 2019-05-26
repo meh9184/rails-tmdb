@@ -1,0 +1,93 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2><%= @tv.name %></h2>
+  </div>
+</div>
+
+<div class="row mt-4 poster-show-container">
+  <div class="col-lg-6 col-md-12 poster-show-img">
+    
+    <% if @tv.poster_path %>
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + @tv.poster_path, alt: @tv.name, class: 'poster-img-md')%>
+    <% else %>
+      <%= image_tag("", alt: "No Poster", class: "animated slideInLeft no-img-preview-md") %>
+    <% end %>
+
+  </div>
+  <div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
+    <h2><%= @tv.name %></h2>
+    <p> ID : <%= @tv.tv_id %></p>
+    <p> Rating : <%= @tv.rating %></p>
+    <h4>Overview</h4>
+    <% if @tv.overview %>
+      <p style="width:85%"> <%= @tv.overview %> </p>
+    <% else %>
+      <p> Not Found </p>
+    <% end %>
+
+    <form action="/tvs/<%= @tv.tv_id %>/edit" method="get">
+      <input type="submit" name="" value="Edit" style="" />
+    </form>
+
+    <form action="/tvs/<%= @tv.tv_id %>" method="post">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" name="" value="Delete" style="" />
+    </form>
+
+    <br/>
+    <br/>
+
+    <p>
+      <%= link_to "< Previous",
+        "/tvs", class: "btn btn-sm btn-danger mb-2"
+      %>
+    </p>
+  </div>
+</div>
+
+<br/>
+<br/>
+
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h3>CAST</h3>
+
+    <% @cast.each do |p|%>
+      <% if p.profile_path %>
+        <a href="/people/<%= p.person_id %>">
+          <%= image_tag('http://image.tmdb.org/t/p/w185/' + p.profile_path, alt: p.name, class: 'poster-img', style:'margin:20px')%>
+        </a>
+      <% else %>
+        <a href="/people/<%= p.person_id %>">
+          <%= image_tag('', alt: p.name, class: 'no-img-preview-sm', style:'margin:20px')%>
+        </a>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+
+<br/>
+<br/>
+
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h3>CREW</h3>
+
+    <% @crew.each do |p|%>
+      <% if p.profile_path %>
+        <a href="/people/<%= p.person_id %>">
+          <%= image_tag('http://image.tmdb.org/t/p/w185/' + p.profile_path, alt: p.name, class: 'poster-img', style:'margin:20px')%>
+        </a>
+      <% else %>
+        <a href="/people/<%= p.person_id %>">
+          <%= image_tag('', alt: p.name, class: 'no-img-preview-sm', style:'margin:20px')%>
+        </a>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+
+<br/><br/>
+<br/><br/>

@@ -1,0 +1,114 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+@import "base/globals.scss";
+@import "font-awesome";
+
+
+.header{
+   font-size: 30px;
+}
+
+.main-text{
+  font-size: 70px;
+  margin: 10px;
+}
+
+.sub-text{
+  font-size: 20px;
+}
+
+.boundary{
+  background-color: rgb(46, 46, 46);
+}
+
+.poster-previews {
+  text-align: center;
+}
+
+.poster-img-sd {
+  -webkit-transition: -webkit-transform 0.35s ease;
+  -moz-transition:    -moz-transform 0.35s ease;
+  -o-transition:      -o-transform 0.35s ease;
+  transition:         transform 0.35s ease;
+  min-width: 185px;
+  min-height: 275px;
+}
+
+.poster-img-md {
+  -webkit-transition: -webkit-transform 0.35s ease;
+  -moz-transition:    -moz-transform 0.35s ease;
+  -o-transition:      -o-transform 0.35s ease;
+  transition:         transform 0.35s ease;
+  min-width: 342px;
+  min-height: 513px;
+}
+
+.poster-img:hover {
+  -ms-transform: scale(1.1) rotate(0.02deg); /*mozilla hack for smoother transform */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.poster-show-img {
+  text-align: center;
+}
+
+.poster-show-info > h4,
+.poster-show-info > h2 {
+  text-decoration: bold;
+}
+
+.no-img-preview-sm {
+  background-image: url('no-img-face.jpg');
+  background-size: cover;
+  background-position: center;
+  color: whitesmoke;
+  min-width: 185px;
+  min-height: 275px;
+  margin: 20px;
+  opacity: 0.8;
+}
+
+.no-img-preview-sm:hover {
+  -ms-transform: scale(1.1) rotate(0.02deg); /*mozilla hack for smoother transform */
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.no-img-preview-md {
+  background-image: url('no-img-face.jpg');
+  background-size: cover;
+  background-position: center;
+  color: whitesmoke;
+  min-width: 342px;
+  min-height: 513px;
+  font-size: 30px;
+}
+
+@media all and (max-width: 992px) {
+  .poster-show-info {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .poster-show-info > * {
+    text-align: center;
+  }
+
+  .search-btn {
+    width: 50px;
+  }
+}
+
+@media all and (min-width: 993px) {
+  .poster-show-container {
+    margin: 0 auto;
+  }
+}

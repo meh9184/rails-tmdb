@@ -1,0 +1,46 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2><%= @movie.title %></h2>
+  </div>
+</div>
+
+<div class="row mt-4 poster-show-container">
+  <div class="col-lg-6 col-md-12 poster-show-img">
+    
+    <% if @movie.poster_path %>
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + @movie.poster_path, alt: @movie.title, class: 'poster-img-md')%>
+    <% else %>
+      <%= image_tag("", alt: "No Poster", class: "animated slideInLeft no-img-preview-md") %>
+    <% end %>
+
+  </div>
+  <div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
+
+    <form action="/movies/<%= @movie.movie_id %>" method="post">
+      <input type="hidden" name="_method" value="put" />
+      <input type="hidden" name="poster_path" value="<%= @movie.poster_path %>" />
+
+      <h2><input type="text" name="title" value="<%= @movie.title %>" /></h2>
+      <p> ID : <%= @movie.movie_id %></p>
+      <p> Rating : <input type="text" name="rating" value="<%= @movie.rating %>" /></p>
+      <h4>Overview</h4>
+      <% if @movie.overview %>
+        <p> <textarea name="overview" rows="9"; style="width:85%"> <%= @movie.overview %></textarea> </p>
+      <% else %>
+        <p> <textarea name="overview" rows="9"; style="width:85%">NOT FOUND</textarea> </p>
+      <% end %>
+
+      <input type="submit" value="Update" style="float:left; margin-bottom:5px">
+
+      <br/>
+      <br/>
+    </form>
+    <p>
+      <%= link_to "< Previous",
+        "/movies/#{@movie.movie_id}", class: "btn btn-sm btn-danger mb-2"
+      %>
+    </p>
+    </form>
+
+  </div>
+</div>

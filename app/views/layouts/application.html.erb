@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsTmdb</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+    <div class="header row text-center mt-4">
+      <div class="col-md-12">
+        <a href="/" style="margin: 10px">HOME</a>
+        <a href="/movies" style="margin: 10px">MOVIES</a>
+        <a href="/tvs" style="margin: 10px">TVS</a>
+        <a href="/people" style="margin: 10px">PEOPLE</a>
+      </div>
+    </div>
+    <hr/>
+
+    <%= yield %>
+  </body>
+</html>

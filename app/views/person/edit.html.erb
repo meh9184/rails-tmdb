@@ -1,0 +1,43 @@
+<div class="row text-center mt-4">
+  <div class="col-md-12">
+    <h2><%= @person.name %></h2>
+  </div>
+</div>
+
+<div class="row mt-4 poster-show-container">
+  <div class="col-lg-6 col-md-12 poster-show-img">
+    
+    <% if @person.profile_path %>
+      <%= image_tag('http://image.tmdb.org/t/p/w185/' + @person.profile_path, alt: @person.name, class: 'poster-img-md')%>
+    <% else %>
+      <%= image_tag("", alt: "No Poster", class: "animated slideInLeft no-img-preview-md") %>
+    <% end %>
+
+  </div>
+  <div class="col-lg-6 col-md-12 poster-show-info mt-3 animated slideInRight">
+
+    <form action="/people/<%= @person.person_id %>" method="post">
+      <input type="hidden" name="_method" value="put" />
+      <input type="hidden" name="profile_path" value="<%= @person.profile_path %>" />
+
+      <h2><input type="text" name="name" value="<%= @person.name %>" /></h2>
+      <p> ID : <%= @person.person_id %></p>
+      <p> BIRTH DAY : <input type="text" name="birthday" value="<%= @person.birthday %>" /></p>
+      <p> JOB : <input type="text" name="job" value="<%= @person.job %>" /></p>
+      <h4>Biography</h4>
+      <p style="width:85%"> <textarea name="biography" rows="7"; style="width:85%"><%= @person.biography %></textarea> </p>
+
+      <input type="submit" value="Update" style="float:left; margin-bottom:5px">
+
+      <br/>
+      <br/>
+    </form>
+    <p>
+      <%= link_to "< Previous",
+        "/people/#{@person.person_id}", class: "btn btn-sm btn-danger mb-2"
+      %>
+    </p>
+    </form>
+
+  </div>
+</div>

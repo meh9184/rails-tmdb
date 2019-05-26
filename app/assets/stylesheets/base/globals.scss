@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumBarunpen';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  overflow-x: hidden;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+  font-family: 'NanumSquareRound';
+  font-weight: 900;
+}
+
+input[type=submit] {
+  font-family: 'NanumSquareRound';
+  font-size: 15px;
+  color: whitesmoke;
+  padding:7px 10x; 
+  background:rgb(216, 57, 57); 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+
+  float:left; 
+  margin-right:10px; 
+  margin-bottom:15px;
+}
+
+input[type=submit]:hover {
+  background:rgb(161, 29, 29); 
+}
+
+.main-text{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+}
+
+.sub-text{
+  font-family: 'NanumBarunpen';
+  color: whitesmoke;
+}
