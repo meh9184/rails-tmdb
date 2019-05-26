@@ -106,13 +106,13 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 - `config/database.yml`
 - username, password 입력
 
-```ruby
+```yml
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-+  username: YOUR_USERNAME
-+  password: YOUR_PASSWORD
+  username: YOUR_USERNAME # 자신 db의 username 입력
+  password: YOUR_PASSWORD # 자신 db의 password 입력
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
@@ -134,7 +134,7 @@ require 'net/http'
 require 'json'
 
 # TMDB API KEY 셋팅
-$tmdb_api_key = YOUR_TMDB_API_KEY
+$tmdb_api_key = YOUR_TMDB_API_KEY # 자신의 api_key 입력
 
 # TMDB API에 GET 요청 전송하는 함수
 def getDataFromApi(uri)
