@@ -101,10 +101,11 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ## *Installation*
 
-### Configurate 
+### 1. Configure  db connection
 
 - `config/database.yml`
 - username, password 입력
+
 ```diff
 default: &default
   adapter: mysql2
@@ -117,10 +118,44 @@ default: &default
 
 development:
   <<: *default
-  database: tmdb_development_smulation
+  database: tmdb_development
 
 test:
   <<: *default
-  database: tmdb_test_smulation
+  database: tmdb_test
 ```
+
+- `lib/crawl_movie.rb`, `lib/crawl_tv.rb`
+-  $tmdb_api_key 입력
+
+```ruby
+#!/usr/bin/env ruby
+require 'net/http'
+require 'json'
+
+# TMDB API KEY 셋팅
+$tmdb_api_key = YOUR_TMDB_API_KEY
+
+# TMDB API에 GET 요청 전송하는 함수
+def getDataFromApi(uri)
+    return JSON.parse(Net::HTTP.get(uri))
+end
+```
+
+### 2. Bundle install 
+
+- `shell command` 프로젝트 루트 위치에서 입력
+```bash
+$ bundle install
+```
+
+### 3. Setup database
+
+- `shell command` 프로젝트 루트 위치에서 입력
+```bash
+$ rake db:create
+$ rake db:migrate
+```
+
+
 
