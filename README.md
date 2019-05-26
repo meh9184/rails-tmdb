@@ -92,7 +92,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ### Service Flow
 > 
-> <img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
+> <img src="./app/assets/images/system-configuration.jpg" alt="system-configuration"/>
 
 <br/>
 
