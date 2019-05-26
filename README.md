@@ -265,7 +265,7 @@
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
 >
 >  
-> #### New
+> ### New
 > - `app/views/*/new.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -278,10 +278,5 @@
 ### Issues
 > 
 > - 현재의 Crawler 는 사실상 평점/인기 높은 데이터를 순차적으로 가져오는 Scraper 정도 되는것 같음. API를 통해 리소스들에 타고 들어가면서 데이터를 수집하는 정통적인 Crawler 개발 필요
-> - TV의 에피소드, 시리즈 정보는 데이터 모델링에서 제외시킴. Ruby on Rails 의 모델링 방법에 대해 이해력이 미흡하여 탐색 중 보류함
+> - TV의 에피소드, 시리즈 정보는 데이터 모델링 하지 못함. Ruby on Rails 의 모델링 문법과 방법에 대해 더 공부할 필요 있음.
 > 
-
-
-
-
-
