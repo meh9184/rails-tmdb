@@ -197,7 +197,7 @@
 >             ```bash
 >             $rails runner lib/crawl_movie.rb 372058
 >             $rails runner lib/crawl_tv.rb 63926
->             $rails runner lib/crawl_people.rb 1245
+>             $rails runner lib/crawl_person.rb 1245
 >             ```
 >     2. 다수 수집
 >         - movie_id = 372058, 637, 129인 Movie
@@ -206,7 +206,7 @@
 >             ```bash
 >             $rails runner lib/crawl_movie.rb 372058 637 129
 >             $rails runner lib/crawl_tv.rb 63926 66732 1396
->             $rails runner lib/crawl_tv.rb 1245 9827 6384
+>             $rails runner lib/crawl_person.rb 1245 9827 6384
 >             ```
 >     3. 평점 순위 높은 순서대로 수집 (person은 평점 존재하지 않음)
 >         - 평점 순위 상위 5개 영화
