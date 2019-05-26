@@ -234,6 +234,8 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 ## *Results*
 
 ### Views
+> 
+> ####Index
 > - `app/views/*/index.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -242,6 +244,8 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 >
 > <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > 
+> 
+> ####Show
 > - `app/views/*/show.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -249,7 +253,9 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
 >
 > <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
-> 
+>
+>  
+> #### Edit
 > - `app/views/*/edit.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
@@ -257,7 +263,9 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
-> 
+>
+>  
+> #### New
 > - `app/views/*/new.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
