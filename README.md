@@ -33,6 +33,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 [루비온레일즈 개발 가이드 공식 다큐먼트](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 
 - Resource Modeling
+
 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
 
 |  HTTP |  Path |  Controller#action |  목적 |
@@ -46,6 +47,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
 
 - Route
+
 `config/routes.rb`
 ```ruby
 Rails.application.routes.draw do
