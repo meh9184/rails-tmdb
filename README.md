@@ -5,7 +5,10 @@
 TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
 
 
-## Description
+## Introduction
+
+
+### Description
 > - Movie, Tv, Person 을 Database에 저장할 수 있도록 Schema를 설계하고 TMDB의 정보를 이용하여 DB를 구축 
 > 
 > - Data를 만들기 위해 TMDB API에 GET 요청을 통해 data를 Crawling 하며, Ruby 스크립트를 이용하여 Movie, Tv, Person 정보를 수집 
@@ -15,7 +18,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > - 서버는 REST하게 설계되었기 때문에 HTTP 의 메소드를 이용한 CRUD 서비스도 가능
 
 
-## Requirements
+### Requirements
 > - [RVM](https://rvm.io/)
 > - [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/) 
 > - [Bundler 2.0.1](https://rubygems.org/gems/bundler/versions/2.0.1)
@@ -23,7 +26,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > - [MySQL 5.6](https://dev.mysql.com/downloads/mysql/5.6.html)
 
 
-## End-points
+### End-points
 
 **Resource Modeling :**
 
@@ -81,24 +84,18 @@ end
 
 ```
 
-
-## Models
+### Models
 
 **Database Schema :**
 
-<img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
+<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
 
 
-## System Flow
+### Service Flow
 
-<img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
+<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
 
 
-## Tools
-- WSL
-- VSCode
-- Mysql Workbench
-- Postman
-- Github
+## Installation
 
 
