@@ -36,7 +36,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
-> |:--------|:----------------:|:--------:|--------:|
+> | --- | --- | --- | --- |
 > |**GET** |/movies|movie#index|모든 Movie 표시|
 > |**GET** |/movies/new|movie#new|Movie 작성용 양식을 반환|
 > |**GET** |/movies/:movie_id|movie#show|하나의 Movie 표시|
@@ -96,6 +96,30 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > <img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
 
 
-## Installation
+<br/>
+<br/>
 
+## *Installation*
+
+### Configuration
+
+- `db/database.yml` 파일 database connection 정보 입력 
+```yml
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: ansdmsghks9184
+  host: 127.0.0.1
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: tmdb_development_smulation
+
+test:
+  <<: *default
+  database: tmdb_test_smulation
+```
 
