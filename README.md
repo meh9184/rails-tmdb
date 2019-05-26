@@ -101,61 +101,61 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ## *Installation*
 
-### 1. Configure  db connection
+### > > Configure  db connection
+> 
+> - `config/database.yml`
+> - username, password 입력
+> 
+> ```yml
+> default: &default
+>   adapter: mysql2
+>   encoding: utf8
+>   pool: 5
+>   username: YOUR_USERNAME # 자신 db의 username 입력
+>   password: YOUR_PASSWORD # 자신 db의 password 입력
+>   host: 127.0.0.1
+>   socket: /tmp/mysql.sock
+> 
+> development:
+>   <<: *default
+>   database: tmdb_development
+> 
+> test:
+>   <<: *default
+>   database: tmdb_test
+> ```
+> 
+> - `lib/crawl_movie.rb`, `lib/crawl_tv.rb`
+> -  $tmdb_api_key 입력
+> 
+> ```ruby
+> #!/usr/bin/env ruby
+> require 'net/http'
+> require 'json'
+> 
+> # TMDB API KEY 셋팅
+> $tmdb_api_key = YOUR_TMDB_API_KEY # 자신의 api_key 입력
+> 
+> # TMDB API에 GET 요청 전송하는 함수
+> def getDataFromApi(uri)
+>     return JSON.parse(Net::HTTP.get(uri))
+> end
+> ```
 
-- `config/database.yml`
-- username, password 입력
+### Bundle install 
 
-```yml
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: YOUR_USERNAME # 자신 db의 username 입력
-  password: YOUR_PASSWORD # 자신 db의 password 입력
-  host: 127.0.0.1
-  socket: /tmp/mysql.sock
+> - `shell command` 프로젝트 루트 위치에서 입력
+> ```bash
+> $ bundle install
+> ```
 
-development:
-  <<: *default
-  database: tmdb_development
+### Setup database
 
-test:
-  <<: *default
-  database: tmdb_test
-```
-
-- `lib/crawl_movie.rb`, `lib/crawl_tv.rb`
--  $tmdb_api_key 입력
-
-```ruby
-#!/usr/bin/env ruby
-require 'net/http'
-require 'json'
-
-# TMDB API KEY 셋팅
-$tmdb_api_key = YOUR_TMDB_API_KEY # 자신의 api_key 입력
-
-# TMDB API에 GET 요청 전송하는 함수
-def getDataFromApi(uri)
-    return JSON.parse(Net::HTTP.get(uri))
-end
-```
-
-### 2. Bundle install 
-
-- `shell command` 프로젝트 루트 위치에서 입력
-```bash
-$ bundle install
-```
-
-### 3. Setup database
-
-- `shell command` 프로젝트 루트 위치에서 입력
-```bash
-$ rake db:create
-$ rake db:migrate
-```
+> - `shell command` 프로젝트 루트 위치에서 입력
+> ```bash
+> $ rake db:create
+> $ rake db:migrate
+> ```
 
 
 
