@@ -33,7 +33,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ## End-points
 
-**Resource Modeling**
+**Resource Modeling :**
 
 - [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
@@ -48,7 +48,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 |**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
 |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
 
-**Route**
+**Route :**
 
 - `config/routes.rb`
 ```ruby
@@ -90,9 +90,12 @@ end
 ```
 
 ##Models
-**Database Schema**
 
-<데이터베이스 스키마 이미지>
+**Database Schema :**
+
+<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
 
 
-## Installation
+## Service Flow
+
+<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
