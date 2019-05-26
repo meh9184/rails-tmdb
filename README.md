@@ -50,7 +50,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > |**GET** |/movies/new|movie#new|Movie 작성용 양식을 반환|
 > |**GET** |/movies/:movie_id|movie#show|하나의 Movie 표시|
 > |**POST** |/movies|movie#create|하나의 Movie 생성|
-> |**GET** |/movies/:movie_id/edit|movie#edit|Movie 작성용 양식을 반환|
+> |**GET** |/movies/:movie_id/edit|movie#edit|Movie 수정용 양식을 반환|
 > |**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
 > |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
 > 
@@ -126,8 +126,8 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 >   adapter: mysql2
 >   encoding: utf8
 >   pool: 5
->   username: YOUR_USERNAME # 자신 db의 username 입력
->   password: YOUR_PASSWORD # 자신 db의 password 입력
+>   username: YOUR_USERNAME   # 자신의 DB username 입력
+>   password: YOUR_PASSWORD   # 자신의 DB password 입력
 >   host: 127.0.0.1
 >   socket: /tmp/mysql.sock
 > 
@@ -149,7 +149,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > require 'json'
 > 
 > # TMDB API KEY 셋팅
-> $tmdb_api_key = YOUR_TMDB_API_KEY # 자신의 api_key 입력
+> $tmdb_api_key = YOUR_TMDB_API_KEY   # 자신의 TMDB api_key 입력
 > 
 > # TMDB API에 GET 요청 전송하는 함수
 > def getDataFromApi(uri)
@@ -234,3 +234,35 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 ## *Results*
 
 ### Views
+> - `app/views/*/index.html.erb`
+> 
+> |  HTTP |  Path |  Controller#action |  목적 |
+> | --- | --- | --- | --- |
+> |**GET** |/resources|resource#index|모든 Resource 표시|
+>
+> <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index"/>
+> 
+> - `app/views/*/show.html.erb`
+> 
+> |  HTTP |  Path |  Controller#action |  목적 |
+> | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
+>
+> <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show"/>
+> 
+> - `app/views/*/edit.html.erb`
+> 
+> |  HTTP |  Path |  Controller#action |  목적 |
+> | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
+>
+> <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit"/>
+> 
+> - `app/views/*/new.html.erb`
+> 
+> |  HTTP |  Path |  Controller#action |  목적 |
+> | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id/new|resource#new|Resource 작성용 양식을 반환|
+>
+> <img src="./app/assets/images/screenshot-new.jpg" alt="screenshot-new"/>
+> 
