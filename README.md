@@ -2,6 +2,10 @@
 
 <미리보기 이미지>
 
+  username: <span style="background-color: #FFFF00">YOUR_USERNAME</span>
+  
+  password: <span style="background-color: #FFFF00">YOUR_PASSWORD</span>
+
 TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
 
 <br/>
