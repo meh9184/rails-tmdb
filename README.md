@@ -165,37 +165,38 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > $ rails server
 > ```
 
-### Data generation
+### Generate data
 
 > - 서버 setting 및 run 까지 완료했지만, 현재 DB 는 비어있음
-> - 데이터를 Crawl하는 Ruby script를 실행하여 TMDB로 부터 데이터를 생성해야 함 
+> - 데이터를 Crawl하는 Ruby script를 실행하여 TMDB로 부터 Data Set 을 생성해야 함 
 > 
 > - **Crwaler Usage**
->  - 단일 수집
->  - movie_id = 372058 인 영화
->  - tv_id = 63926 인 TV 방송
->    ```bash
->    $rails runner lib/crawl_movie 372058
->    $rails runner lib/crawl_tv 63926
->    ```
->  - 다수 수집
->  - movie_id = 372058, 637, 129 인 영화
->  - tv_id = 63926, 66732, 1396 인 TV 방송
->    ```bash
->    $rails runner lib/crawl_movie 372058 637 129
->    $rails runner lib/crawl_tv 63926 66732 1396
->    ```
->  - 평점 순위 높은 순서대로 수집
->  - 평점 순위 상위 5개 영화
->  - 평점 순위 상위 50개 TV 방송
->    ```bash
->    $rails runner lib/crawl_movie -rating 5
->    $rails runner lib/crawl_tv -rating 50
->    ```
->  - 인기 있는 순서대로 수집
->  - 요즘 가장 있는 상위 32개 영화
->  - 요즘 가장 있는 상위 7개 TV 방송
->    ```bash
->    $rails runner lib/crawl_movie -popularity 5
->    $rails runner lib/crawl_tv -popularity 50
->    ```
+> 
+>     1. 단일 수집
+>         - movie_id = 372058 인 영화
+>         - tv_id = 63926 인 TV 방송
+>             ```bash
+>             $rails runner lib/crawl_movie 372058
+>             $rails runner lib/crawl_tv 63926
+>             ```
+>     2. 다수 수집
+>         - movie_id = 372058, 637, 129 인 영화
+>         - tv_id = 63926, 66732, 1396 인 TV 방송
+>             ```bash
+>             $rails runner lib/crawl_movie 372058 637 129
+>             $rails runner lib/crawl_tv 63926 66732 1396
+>             ```
+>     3. 평점 순위 높은 순서대로 수집
+>         - 평점 순위 상위 5개 영화
+>         - 평점 순위 상위 50개 TV 방송
+>             ```bash
+>             $rails runner lib/crawl_movie -rating 5
+>             $rails runner lib/crawl_tv -rating 50
+>             ```
+>     4. 인기 있는 순서대로 수집
+>         - 요즘 가장 있는 상위 32개 영화
+>         - 요즘 가장 있는 상위 7개 TV 방송
+>             ```bash
+>             $rails runner lib/crawl_movie -popularity 5
+>             $rails runner lib/crawl_tv -popularity 50
+>             ```
