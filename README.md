@@ -101,7 +101,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ## *Installation*
 
-### > > Configure  db connection
+### Configure  db connection
 > 
 > - `config/database.yml`
 > - username, password 입력
