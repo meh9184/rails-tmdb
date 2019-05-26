@@ -28,72 +28,72 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 ### End-points
 
-**Resource Modeling :**
-
-- [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
-- 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
-
-|  HTTP |  Path |  Controller#action |  목적 |
-|:--------|:----------------:|:--------:|--------:|
-|**GET** |/movies|movie#index|모든 Movie 표시|
-|**GET** |/movies/new|movie#new|Movie 작성용 양식을 반환|
-|**GET** |/movies/:movie_id|movie#show|하나의 Movie 표시|
-|**POST** |/movies|movie#create|하나의 Movie 생성|
-|**GET** |/movies/:movie_id/edit|movie#edit|Movie 작성용 양식을 반환|
-|**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
-|**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
-
-**Route :**
-
-- `config/routes.rb`
-```ruby
-Rails.application.routes.draw do
-
-  # Home endpoint
-  root 'home#index'
-  get 'home/index' => 'home#index'
-
-  # Movies CRUD endpoints
-  get 'movies' => 'movie#index'
-  get 'movies/new' => 'movie#new'
-  get 'movies/:movie_id' => 'movie#show'
-  post '/movies' => 'movie#create'
-  get 'movies/:movie_id/edit' => 'movie#edit'
-  put 'movies/:movie_id' => 'movie#update'
-  delete 'movies/:movie_id' => 'movie#destroy'
-
-  # Tvs CRUD endpoints
-  get 'tvs' => 'tv#index'
-  get 'tvs/new' => 'tv#new'
-  get 'tvs/:tv_id' => 'tv#show'
-  post '/tvs' => 'tv#create'
-  get 'tvs/:tv_id/edit' => 'tv#edit'
-  put 'tvs/:tv_id' => 'tv#update'
-  delete 'tvs/:tv_id' => 'tv#destroy'
-
-  # People CRUD endpoints
-  get 'people' => 'person#index'
-  get 'people/new' => 'person#new'
-  get 'people/:person_id' => 'person#show'
-  post '/people' => 'person#create'
-  get 'people/:person_id/edit' => 'person#edit'
-  put 'people/:person_id' => 'person#update'
-  delete 'people/:person_id' => 'person#destroy'
-
-end
-
-```
+> **Resource Modeling :**
+> 
+> - [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
+> - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
+> 
+> |  HTTP |  Path |  Controller#action |  목적 |
+> |:--------|:----------------:|:--------:|--------:|
+> |**GET** |/movies|movie#index|모든 Movie 표시|
+> |**GET** |/movies/new|movie#new|Movie 작성용 양식을 반환|
+> |**GET** |/movies/:movie_id|movie#show|하나의 Movie 표시|
+> |**POST** |/movies|movie#create|하나의 Movie 생성|
+> |**GET** |/movies/:movie_id/edit|movie#edit|Movie 작성용 양식을 반환|
+> |**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
+> |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
+> 
+> **Route :**
+> 
+> - `config/routes.rb`
+> ```ruby
+> Rails.application.routes.draw do
+> 
+>   # Home endpoint
+>   root 'home#index'
+>   get 'home/index' => 'home#index'
+> 
+>   # Movies CRUD endpoints
+>   get 'movies' => 'movie#index'
+>   get 'movies/new' => 'movie#new'
+>   get 'movies/:movie_id' => 'movie#show'
+>   post '/movies' => 'movie#create'
+>   get 'movies/:movie_id/edit' => 'movie#edit'
+>   put 'movies/:movie_id' => 'movie#update'
+>   delete 'movies/:movie_id' => 'movie#destroy'
+> 
+>   # Tvs CRUD endpoints
+>   get 'tvs' => 'tv#index'
+>   get 'tvs/new' => 'tv#new'
+>   get 'tvs/:tv_id' => 'tv#show'
+>   post '/tvs' => 'tv#create'
+>   get 'tvs/:tv_id/edit' => 'tv#edit'
+>   put 'tvs/:tv_id' => 'tv#update'
+>   delete 'tvs/:tv_id' => 'tv#destroy'
+> 
+>   # People CRUD endpoints
+>   get 'people' => 'person#index'
+>   get 'people/new' => 'person#new'
+>   get 'people/:person_id' => 'person#show'
+>   post '/people' => 'person#create'
+>   get 'people/:person_id/edit' => 'person#edit'
+>   put 'people/:person_id' => 'person#update'
+>   delete 'people/:person_id' => 'person#destroy'
+> 
+> end
+> 
+> ```
 
 ### Models
 
 **Database Schema :**
 
-<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
+<img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
 ### Service Flow
 
-<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
+<img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
 
 
 ## Installation
