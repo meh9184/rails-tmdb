@@ -105,13 +105,13 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 - `config/database.yml`
 - username, password 입력
-```yml
+```diff
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <span style="background-color: #FFFF00">YOUR_USERNAME</span>
-  password: <span style="background-color: #FFFF00">YOUR_PASSWORD</span>
++  username: YOUR_USERNAME
++  password: YOUR_PASSWORD
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
