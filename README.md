@@ -1,5 +1,5 @@
 # rails-tmdb
-<mark>test</mark>
+
 <미리보기 이미지>
 
 TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
@@ -110,8 +110,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <mark>YOUR_USERNAME</mark>
-  password: <mark>YOUR_PASSWORD</mark>
+  username: <span style="background-color: #FFFF00">YOUR_USERNAME</span>
+  password: <span style="background-color: #FFFF00">YOUR_PASSWORD</span>
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
