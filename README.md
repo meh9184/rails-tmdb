@@ -16,19 +16,11 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 
 
 ## Requirements
-- [RVM](https://rvm.io/)
-- [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/) 
-- [Bundler 2.0.1](https://rubygems.org/gems/bundler/versions/2.0.1)
-- [Rails 5.2.3](https://rubygems.org/gems/rails/versions/5.2.3)
-- [MySQL 5.6](https://dev.mysql.com/downloads/mysql/5.6.html)
-
-
-## Tools
-- WSL
-- VSCode
-- Mysql Workbench
-- Postman
-- Github
+> - [RVM](https://rvm.io/)
+> - [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/) 
+> - [Bundler 2.0.1](https://rubygems.org/gems/bundler/versions/2.0.1)
+> - [Rails 5.2.3](https://rubygems.org/gems/rails/versions/5.2.3)
+> - [MySQL 5.6](https://dev.mysql.com/downloads/mysql/5.6.html)
 
 
 ## End-points
@@ -90,18 +82,23 @@ end
 ```
 
 
-##Models
+## Models
 
 **Database Schema :**
 
-<img src="./app/assets/imges/data-schema.jpg" alt="database-schema"/>
+<img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
 ## System Flow
 
-<img src="./app/assets/imges/system-flow.jpg" alt="system-flow"/>
+<img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
 
 
-
+## Tools
+- WSL
+- VSCode
+- Mysql Workbench
+- Postman
+- Github
 
 
