@@ -232,6 +232,8 @@
 >             $rails runner lib/crawl_all.rb 10
 >             ```
 
+<br/>
+
 ## *Results*
 
 ### Views
@@ -282,6 +284,7 @@
 > - TV의 에피소드, 시리즈 정보는 데이터 모델링 하지 못함. Ruby on Rails 의 모델링 문법과 방법에 대해 더 공부할 필요 있음.
 > 
 
+<br/>
 
 ## *References*
 > 
