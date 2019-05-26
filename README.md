@@ -5,11 +5,11 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 <div>
   <div width='100%'>
     <img src="./app/assets/images/screenshot-main-1.jpg" width='48%'/>
-    <img src="./app/assets/images/screenshot-main-2.jpg" width='48%'/>
+    <img src="./app/assets/images/screenshot-main-4.jpg" width='48%'/>
   </div>
   <div width='100%'>
     <img src="./app/assets/images/screenshot-main-3.jpg" width='48%'/>
-    <img src="./app/assets/images/screenshot-main-4.jpg" width='48%'/>
+    <img src="./app/assets/images/screenshot-main-2.jpg" width='48%'/>
   </div>
 </div>
 <br>
@@ -108,7 +108,7 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
-### Service f;ow
+### Service flow
 > 
 > <img src="./app/assets/images/system-configuration.jpg" alt="system-configuration"/>
 
