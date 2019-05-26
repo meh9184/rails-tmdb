@@ -84,16 +84,14 @@ TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지
 > 
 > ```
 
-### Models
-
-**Database Schema :**
-
-<img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
+### Database Schema
+> 
+> <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
 ### Service Flow
-
-<img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
+> 
+> <img src="./app/assets/images/system-flow.jpg" alt="system-flow"/>
 
 
 ## Installation
