@@ -20,13 +20,15 @@
 
 
 ### Description
-> - Movie, Tv, Person 을 Database에 저장할 수 있도록 Schema를 설계하고 TMDB의 정보를 이용하여 DB를 구축 
+> - Movie, Tv, Person 을 Database에 저장할 수 있도록 Schema를 설계하고 DB를 구축 
 > 
-> - Data를 만들기 위해 TMDB API에 GET 요청을 통해 data를 Crawling 하며, Ruby 스크립트를 이용하여 Movie, Tv, Person 정보를 수집 
+> - Data를 만들기 위해 TMDB API에 GET 요청을 통해 Movie, Tv, Person 정보를 Crawling 하며, Crawler는 Ruby 스크립트로 구현
 >
-> - Ruby on Rails 프레임워크를 이용하여 간단한 웹페이지를 구축하며, 웹 페이지의 유저 인터페이스를 이용하여 DB에 저장된 Data의 CRUD 서비스를 제공
+> - Ruby on Rails 프레임워크를 이용하여 간단한 웹페이지를 구축 
 > 
-> - 서버는 REST하게 설계되었기 때문에 HTTP 의 메소드를 이용한 CRUD 서비스도 가능
+> - 웹 브라우저를 통해 CRUD 서비스
+> 
+> - 서버는 REST하게 설계되었기 때문에 HTTP 의 ruequst 이용한 CRUD 서비스도 가능
 
 
 ### Requirements
@@ -39,7 +41,7 @@
 
 ### End-points
 
-> **Resource Modeling :**
+> **Resource Modeling**
 > 
 > - [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 > - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
@@ -54,7 +56,7 @@
 > |**PUT** |/movies/:movie_id|movie#update|하나의 Movie 수정|
 > |**DELETE** |/movies/:movie_id|movie#destroy|하나의 Movie 삭제|
 > 
-> **Route :**
+> **Route**
 > 
 > - `config/routes.rb`
 > ```ruby
@@ -165,7 +167,7 @@
 > ```
 
 ### Setup database
-> - 같은 위치에서 입력
+> - `shell command` 프로젝트 루트 위치에서 입력
 > ```bash
 > $ rake db:create
 > $ rake db:migrate
@@ -185,9 +187,8 @@
 
 ### Generate data
 
-> - 서버 setting 및 run 까지 완료했지만, 현재 DB 는 비어있음
-> - 데이터를 Crawl하는 Ruby script를 실행하여 TMDB로 부터 Data Set 을 생성해야 함 
-> 
+> - 서버 setting 및 run 까지 완료했지만, 초기 DB 는 비어있는 상태
+> - 데이터를 Crawl하는 Ruby script를 실행하여 TMDB로 부터 Data Set 생성 가능 
 > - **Crwaler Usage**
 > 
 >     1. 단일 수집
@@ -224,10 +225,9 @@
 >             $rails runner lib/crawl_tv.rb -popularity 7
 >             $rails runner lib/crawl_person.rb -popularity 15
 >             ```
->     5. -rating -popular 옵션 들어간 스크립트 한번에 실행
->         - 옵션으로 모든 경우 수집하고 싶은 데이터의 개수 입력
+>     5. 한번의 명령으로 -rating -popular 옵션의 데이터들을 수집
 >         - Movie, Tv, People 모두 상위 10개의 -rating -popular 수집하고 싶은 경우
->         - 10개씩 모두 수집하는 경우 약 5분 내외 소요
+>         - 10을 파라미터로 넘기면 약 5분 내외 소요
 >             ```bash
 >             $rails runner lib/crawl_all.rb 10
 >             ```
@@ -239,7 +239,10 @@
 ### Views
 > 
 > ### Index
-> - `app/views/*/index.html.erb`
+> - `app/views/home/index.html.erb`
+> - `app/views/movie/index.html.erb`
+> - `app/views/tv/index.html.erb`
+> - `app/views/person/index.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
 > | --- | --- | --- | --- |
@@ -249,7 +252,9 @@
 > 
 > 
 > ### Show
-> - `app/views/*/show.html.erb`
+> - `app/views/movie/show.html.erb`
+> - `app/views/tv/show.html.erb`
+> - `app/views/person/show.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
 > | --- | --- | --- | --- |
@@ -259,7 +264,9 @@
 >
 >  
 > ### Edit
-> - `app/views/*/edit.html.erb`
+> - `app/views/movie/edit.html.erb`
+> - `app/views/tv/edit.html.erb`
+> - `app/views/person/edit.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
 > | --- | --- | --- | --- |
@@ -269,7 +276,9 @@
 >
 >  
 > ### New
-> - `app/views/*/new.html.erb`
+> - `app/views/movie/new.html.erb`
+> - `app/views/tv/new.html.erb`
+> - `app/views/person/new.html.erb`
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
 > | --- | --- | --- | --- |
@@ -282,6 +291,17 @@
 > 
 > - 현재의 Crawler 는 사실상 평점/인기 높은 데이터를 순차적으로 가져오는 Scraper 정도 되는것 같음. API를 통해 리소스들에 타고 들어가면서 데이터를 수집하는 정통적인 Crawler 개발 필요
 > - TV의 에피소드, 시리즈 정보는 데이터 모델링 하지 못함. Ruby on Rails 의 모델링 문법과 방법에 대해 더 공부할 필요 있음.
+> 
+
+<br/>
+
+## *Tools*
+> 
+> - [WSL](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
+> - [VSCode](https://code.visualstudio.com/docs/?dv=win)
+> - [Mysql Workbench](https://www.mysql.com/products/workbench/)
+> - [Postman](https://www.getpostman.com/downloads/)
+> - [Github](https://github.com/meh9184/tmdb-rails)
 > 
 
 <br/>
