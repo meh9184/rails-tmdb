@@ -248,7 +248,7 @@
 > | --- | --- | --- | --- |
 > |**GET** |/resources|resource#index|모든 Resource 표시|
 >
-> <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index" width='62%' height='62%'/>
+> <img src="./app/assets/images/screenshot-home.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > <br/>
 > 
 > ### Show
