@@ -297,21 +297,10 @@
 <br/>
 
 ## *Tools*
-> 
-### OS Environment Subsystem
 > - [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
-> 
-
-### Devlopment Editor
 > - [VSCode](https://code.visualstudio.com/docs/?dv=win)
-> 
-
-### DB Monitoring / Testing
 > - [Mysql Workbench](https://www.mysql.com/products/workbench/)
 > - [Postman](https://www.getpostman.com/downloads/)
-> 
-
-### Source Configuration Management
 > - [Github](https://github.com/meh9184/tmdb-rails)
 > 
 
