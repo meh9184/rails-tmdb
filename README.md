@@ -122,7 +122,6 @@
 > 
 > - Github repository를 clone
 > ```bash
-> default: &default
 > $ git clone https://github.com/meh9184/rails-tmdb
 > ```
 > 
