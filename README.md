@@ -250,6 +250,7 @@
 >
 > <img src="./app/assets/images/screenshot-home.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > <br/>
+> <br/>
 > 
 > ### Show
 > - `app/views/movie/show.html.erb`
@@ -262,6 +263,7 @@
 >
 > <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
 > <br/>
+> <br/>
 >  
 > ### Edit
 > - `app/views/movie/edit.html.erb`
@@ -273,6 +275,7 @@
 > |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
+> <br/>
 > <br/>
 >  
 > ### New
