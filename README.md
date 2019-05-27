@@ -19,7 +19,7 @@
 ## *Introduction*
 
 
-### Description
+### Summary
 > - Movie, Tv, Person 을 Database에 저장할 수 있도록 Schema를 설계하고 DB를 구축 
 > 
 > - Data를 만들기 위해 TMDB API에 GET 요청을 통해 Movie, Tv, Person 정보를 Crawling 하며, Crawler는 Ruby 스크립트로 구현
