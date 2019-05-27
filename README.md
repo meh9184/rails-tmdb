@@ -118,6 +118,15 @@
 
 ## *Installation*
 
+### Clone project
+> 
+> - Github repository를 clone
+> ```bash
+> default: &default
+> $ git clone https://github.com/meh9184/rails-tmdb
+> ```
+> 
+
 ### Configure  db connection
 > 
 > - `config/database.yml` 파일 상단의
