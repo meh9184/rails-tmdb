@@ -300,7 +300,16 @@
 
 <br/>
 
-## *Tools*
+## *Addition Commentary*
+> 
+### Tools for Windows OS user
+> - 가독성과 크롤 시간 효율을 위해 크롤링 수행시 영화 및 TV의 cast와 crew 정보는 최대 5개 씩만 수집하도록 제한하였습니다.
+> - Home 인덱스 페이지에서 Movies, Tvs, People 3개 정보는 각각 무작위로 선정하되, 포스터 또는 프로필 이미지가 존재하는 data 중에서 선정합니다.
+> - Movie, Tv 인덱스 페이지에서 데이터 정렬 순서는 업데이트 시간을 기준으로 합니다.
+> - People 인덱스 페이지에서 데이터 정렬 순서는 업데이트 시간을 기준으로 합니다.
+> 
+
+### Tools for Windows OS user
 > - [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
 > - [VSCode](https://code.visualstudio.com/docs/?dv=win)
 > - [Mysql Workbench](https://www.mysql.com/products/workbench/)
