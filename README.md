@@ -249,7 +249,7 @@
 > |**GET** |/resources|resource#index|모든 Resource 표시|
 >
 > <img src="./app/assets/images/screenshot-index.jpg" alt="screenshot-index" width='62%' height='62%'/>
-> 
+> <br/>
 > 
 > ### Show
 > - `app/views/movie/show.html.erb`
@@ -261,7 +261,7 @@
 > |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
 >
 > <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
->
+> <br/>
 >  
 > ### Edit
 > - `app/views/movie/edit.html.erb`
@@ -273,7 +273,7 @@
 > |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
->
+> <br/>
 >  
 > ### New
 > - `app/views/movie/new.html.erb`
@@ -285,6 +285,7 @@
 > |**GET** |/resources/:resource_id/new|resource#new|Resource 작성용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-new.jpg" alt="screenshot-new" width='62%' height='62%'/>
+> <br/>
 > 
 
 ### Issues
@@ -297,10 +298,20 @@
 
 ## *Tools*
 > 
-> - [WSL](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
+### OS Environment Subsystem
+> - [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10)
+> 
+
+### Devlopment Editor
 > - [VSCode](https://code.visualstudio.com/docs/?dv=win)
+> 
+
+### DB Monitoring / Testing
 > - [Mysql Workbench](https://www.mysql.com/products/workbench/)
 > - [Postman](https://www.getpostman.com/downloads/)
+> 
+
+### Source Configuration Management
 > - [Github](https://github.com/meh9184/tmdb-rails)
 > 
 
