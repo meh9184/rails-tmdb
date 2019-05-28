@@ -239,6 +239,8 @@
 >             ```bash
 >             $rails runner lib/crawl_all.rb 10
 >             ```
+> - [http://localhost:3000/](http://localhost:3000/) 접속하여 데이터 잘 추가 되었는지 확인
+
 
 <br/>
 
@@ -311,7 +313,7 @@
 ## *Addition Commentary*
 > 
 ### Some rules
-> - 가독성과 크롤링 시간 효율을 위해 크롤링 수행시 Movie 및 TV의 cast와 crew는 최대 5개씩만 수집하도록 제한하였으며, Person의 영화 출연작과 TV 출연작 역시 5개씩 수집하고록 제한하였습니다.
+> - 가독성과 크롤링 시간 효율을 위해 크롤링 수행시 Movie 및 TV의 cast와 crew는 최대 5개씩만 수집하도록 제한하였으며, Person의 영화 출연작과 TV 출연작 역시 5개씩 수집하도록 제한하였습니다.
 > - Home 인덱스 페이지에서 Movies, Tvs, People 3개 정보는 각각 무작위로 선정하되, 포스터 또는 프로필 이미지가 존재하는 data 중에서 선정합니다.
 > - Movie, Tv 인덱스 페이지에서 데이터 정렬 순서는 업데이트 시간을 기준으로 합니다.
 > - People 인덱스 페이지에서 데이터 정렬 순서는 업데이트 시간을 기준으로 합니다.
