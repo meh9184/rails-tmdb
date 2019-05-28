@@ -240,9 +240,9 @@
 >             $rails runner lib/crawl_all.rb 10
 >             ```
 > - 웹 브라우저로 접속하여 데이터 잘 추가 되었는지 확인
-> ```
+> ``
 > [http://localhost:3000/](http://localhost:3000/)
-> ```
+> ``
 
 
 <br/>
