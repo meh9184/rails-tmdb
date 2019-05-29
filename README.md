@@ -229,9 +229,9 @@
 >         - 요즘 가장 인기 있는 상위 7개 TV
 >         - 요즘 가장 인기 있는 상위 15개 People
 >             ```bash
->             $rails runner lib/crawl_movie.rb -popularity 32
->             $rails runner lib/crawl_tv.rb -popularity 7
->             $rails runner lib/crawl_person.rb -popularity 15
+>             $rails runner lib/crawl_movie.rb -popular 32
+>             $rails runner lib/crawl_tv.rb -popular 7
+>             $rails runner lib/crawl_person.rb -popular 15
 >             ```
 >     5. 한번의 명령으로 -rating -popular 옵션의 데이터들을 수집
 >         - Movie, Tv, People 모두 상위 10개의 -rating -popular 수집하고 싶은 경우
