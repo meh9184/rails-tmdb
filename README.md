@@ -126,7 +126,6 @@
 > ```bash
 > $ git clone https://github.com/meh9184/rails-tmdb
 > ```
-> <img src="./app/assets/images/clone-git.gif" alt="clone_git.gif"/>
 > 
 
 ### Configure  db connection
