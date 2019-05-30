@@ -41,7 +41,7 @@
 
 ### End-points
 
-> **Resource Modeling**
+> **Resource modeling**
 > 
 > - [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 > - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
@@ -107,11 +107,13 @@
 
 ### Models
 > 
+> **Database schema**
 > <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
 
 
-### Service flow
+### System configuration
 > 
+> **Service flow**
 > <img src="./app/assets/images/system-configuration.jpg" alt="system-configuration"/>
 
 <br/>
@@ -124,6 +126,7 @@
 > ```bash
 > $ git clone https://github.com/meh9184/rails-tmdb
 > ```
+> <img src="./app/assets/images/clone-git.gif" alt="clone-git"/>
 > 
 
 ### Configure  db connection
