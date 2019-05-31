@@ -259,9 +259,9 @@
 > - `app/views/tv/index.html.erb`
 > - `app/views/person/index.html.erb`
 > 
-> |  HTTP |  Path |  Controller#action |  목적 |
-> | --- | --- | --- | --- |
-> |**GET** |/resources|resource#index|모든 Resource 표시|
+> |  HTTP |  Path |  Controller#action |  Method |  목적 |
+> | --- | --- | --- | --- | --- |
+> |**GET** |/resources|resource#index|Read|모든 Resource 표시|
 >
 > <img src="./app/assets/images/screenshot-home.jpg" alt="screenshot-index" width='62%' height='62%'/>
 > <br/>
@@ -272,9 +272,9 @@
 > - `app/views/tv/show.html.erb`
 > - `app/views/person/show.html.erb`
 > 
-> |  HTTP |  Path |  Controller#action |  목적 |
-> | --- | --- | --- | --- |
-> |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
+> |  HTTP |  Path |  Controller#action |  Method |  목적 |
+> | --- | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id|resource#show|Read|하나의 Resource 표시|
 >
 > <img src="./app/assets/images/screenshot-show.jpg" alt="screenshot-show" width='62%' height='62%'/>
 > <br/>
@@ -285,9 +285,9 @@
 > - `app/views/tv/edit.html.erb`
 > - `app/views/person/edit.html.erb`
 > 
-> |  HTTP |  Path |  Controller#action |  목적 |
-> | --- | --- | --- | --- |
-> |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
+> |  HTTP |  Path |  Controller#action |  Method |  목적 |
+> | --- | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id/edit|resource#edit|Update|Resource 수정용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-edit.jpg" alt="screenshot-edit" width='62%' height='62%'/>
 > <br/>
@@ -298,9 +298,9 @@
 > - `app/views/tv/new.html.erb`
 > - `app/views/person/new.html.erb`
 > 
-> |  HTTP |  Path |  Controller#action |  목적 |
-> | --- | --- | --- | --- |
-> |**GET** |/resources/:resource_id/new|resource#new|Resource 작성용 양식을 반환|
+> |  HTTP |  Path |  Controller#action |  Method |  목적 |
+> | --- | --- | --- | --- | --- |
+> |**GET** |/resources/:resource_id/new|resource#new|Create|Resource 작성용 양식을 반환|
 >
 > <img src="./app/assets/images/screenshot-new.jpg" alt="screenshot-new" width='62%' height='62%'/>
 > <br/>
