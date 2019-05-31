@@ -46,15 +46,15 @@
 > - [RoR 개발 가이드 문서](https://guides.rorlab.org/routing.html)를 참조하여 RESTful하게 리소스를 모델링
 > - 모든 리소스 (Movie, Tv, Person, MovieCredit, TvCredit) 들은 다음과 같은 모델링 원칙을 준수
 > 
-> |  HTTP |  Path |  Controller#action |  목적 |
-> | --- | --- | --- | --- |
-> |**GET** |/resources|resource#index|모든 Resource 표시|
-> |**GET** |/resources/new|resource#new|Resource 작성용 양식을 반환|
-> |**GET** |/resources/:resource_id|resource#show|하나의 Resource 표시|
-> |**POST** |/resources|resource#create|하나의 Resource 생성|
-> |**GET** |/resources/:resource_id/edit|resource#edit|Resource 수정용 양식을 반환|
-> |**PUT** |/resources/:resource_id|resource#update|하나의 Resource 수정|
-> |**DELETE** |/resources/:resource_id|resource#destroy|하나의 Resource 삭제|
+> |  HTTP |  Path |  Controller#action |  Method |  목적 |
+> | --- | --- | --- | --- | --- |
+> |**GET** |/resources|resource#index|Read|모든 Resource 표시|
+> |**GET** |/resources/new|resource#new|Create|Resource 작성용 양식을 반환|
+> |**GET** |/resources/:resource_id|resource#show|Read|하나의 Resource 표시|
+> |**POST** |/resources|resource#create|Create|하나의 Resource 생성|
+> |**GET** |/resources/:resource_id/edit|resource#edit|Update|Resource 수정용 양식을 반환|
+> |**PUT** |/resources/:resource_id|resource#update|Update|하나의 Resource 수정|
+> |**DELETE** |/resources/:resource_id|resource#destroy|Delete|하나의 Resource 삭제|
 > 
 > **Route**
 > 
