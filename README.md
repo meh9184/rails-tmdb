@@ -48,13 +48,13 @@
 > 
 > |  HTTP |  Path |  Controller#action |  목적 |
 > | --- | --- | --- | --- |
-> |**GET** |/resources|movie#index|모든 Movie 표시|
-> |**GET** |/resources/new|movie#new|Movie 작성용 양식을 반환|
-> |**GET** |/resources/:movie_id|movie#show|하나의 Movie 표시|
-> |**POST** |/resources|movie#create|하나의 Movie 생성|
-> |**GET** |/resources/:movie_id/edit|movie#edit|Movie 수정용 양식을 반환|
-> |**PUT** |/resources/:movie_id|movie#update|하나의 Movie 수정|
-> |**DELETE** |/resources/:movie_id|movie#destroy|하나의 Movie 삭제|
+> |**GET** |/resources|resource#index|모든 Movie 표시|
+> |**GET** |/resources/new|resource#new|Movie 작성용 양식을 반환|
+> |**GET** |/resources/:resource_id|resource#show|하나의 Movie 표시|
+> |**POST** |/resources|resource#create|하나의 Movie 생성|
+> |**GET** |/resources/:resource_id/edit|resource#edit|Movie 수정용 양식을 반환|
+> |**PUT** |/resources/:resource_id|resource#update|하나의 Movie 수정|
+> |**DELETE** |/resources/:resource_id|resource#destroy|하나의 Movie 삭제|
 > 
 > **Route**
 > 
