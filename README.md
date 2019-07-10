@@ -124,7 +124,7 @@
 > 
 > - Github repository를 clone
 > ```bash
-> $ git clone https://github.com/meh9184/rails-tmdb
+> $ git clone https://github.com/meh9184/rails-tmdb.git
 > ```
 > 
 
