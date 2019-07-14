@@ -108,9 +108,7 @@
 ### Models
 > 
 > **Database schema**
-> <kdb>
 > <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
-> </kdb>
 
 ### System configuration
 > 
