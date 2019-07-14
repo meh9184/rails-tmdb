@@ -2,7 +2,6 @@
 
 #### TMDB를 이용하여 Movie, Tv, Person DB를 구축하고 간단한 웹페이지를 통해 Data의 CRUD를 서비스
 
-<kdb>
 <div>
   <div width='100%'>
     <img src="./app/assets/images/screenshot-main-1.jpg" width='48%'/>
@@ -13,7 +12,6 @@
     <img src="./app/assets/images/screenshot-main-2.jpg" width='48%'/>
   </div>
 </div>
-</kdb>
 <br>
 
 <br/>
@@ -110,8 +108,9 @@
 ### Models
 > 
 > **Database schema**
+> <kdb>
 > <img src="./app/assets/images/data-schema.jpg" alt="database-schema"/>
-
+> </kdb>
 
 ### System configuration
 > 
