@@ -4,8 +4,12 @@
 
 <div>
   <div width='100%'>
-    <img src="./app/assets/images/screenshot-main-1.jpg" width='48%'/>
-    <img src="./app/assets/images/screenshot-main-4.jpg" width='48%'/>
+    <kdb>
+      <img src="./app/assets/images/screenshot-main-1.jpg" width='48%'/>
+    </kdb>
+    <kdb>
+      <img src="./app/assets/images/screenshot-main-4.jpg" width='48%'/>
+    </kdb>
   </div>
   <div width='100%'>
     <img src="./app/assets/images/screenshot-main-3.jpg" width='48%'/>
