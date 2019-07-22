@@ -171,7 +171,9 @@
 ### Install bundle 
 
 > - `shell command` 프로젝트 루트 위치에서 입력
+> - libmysqlclient 및 dependencies 설치
 > ```bash
+> $ apt-get install libmysqlclient-dev
 > $ bundle install
 > ```
 
